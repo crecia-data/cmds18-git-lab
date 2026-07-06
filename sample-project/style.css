@@ -1,0 +1,81 @@
+/*
+  🎨 이 파일에서 색·글꼴을 바꿉니다.
+  실습 03(평행우주)에서 Claude에게 "배경색 파랑으로 바꿔줘"라고 말해보세요.
+  핵심 색은 아래 --accent 한 줄만 바꾸면 됩니다.
+*/
+:root {
+  --accent: #A50034;        /* ← 이 색을 바꿔보세요 (지금은 빨강 계열) */
+  --bg: #f7f7f8;
+  --card: #ffffff;
+  --text: #1a1a1a;
+  --muted: #6b7280;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, "Noto Sans KR", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  background: var(--card);
+  max-width: 420px;
+  width: 100%;
+  padding: 40px 32px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+  text-align: center;
+  border-top: 6px solid var(--accent);
+}
+
+.avatar {
+  font-size: 56px;
+  margin-bottom: 12px;
+}
+
+.name {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.tagline {
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.bio {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.links a:hover { text-decoration: underline; }
+
+.made {
+  font-size: 12px;
+  color: var(--muted);
+  border-top: 1px solid #eee;
+  padding-top: 16px;
+}
